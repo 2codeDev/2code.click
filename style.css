@@ -1,13 +1,20 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #4e54c8);
-    color: white;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7b2ff7, #f107a3);
+    color: white;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -17,51 +24,77 @@ body {
 h1 {
     margin-bottom: 30px;
     font-size: 3rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Button Container */
 .button-container {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
+/* Button Styling */
 .button {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
     font-weight: bold;
+    cursor: pointer;
     color: white;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button i {
-    margin-right: 8px;
-    font-size: 1.5rem;
+    margin-right: 10px;
+    font-size: 1.8rem;
 }
 
-/* Twitter Button */
+/* Glowing Effect */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    filter: blur(15px);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.button:hover::before {
+    opacity: 1;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Twitter Button Styling */
 .twitter {
     background: #1DA1F2;
-    box-shadow: 0 4px 8px rgba(29, 161, 242, 0.4);
 }
 
 .twitter:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(29, 161, 242, 0.6);
+    box-shadow: 0 0 20px #1DA1F2, 0 0 40px #1DA1F2;
 }
 
-/* Roblox Button */
+/* Roblox Button Styling */
 .roblox {
     background: #E61E3C;
-    box-shadow: 0 4px 8px rgba(230, 30, 60, 0.4);
 }
 
 .roblox:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(230, 30, 60, 0.6);
+    box-shadow: 0 0 20px #E61E3C, 0 0 40px #E61E3C;
 }
