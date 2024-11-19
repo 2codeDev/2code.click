@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #4e54c8);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 3rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+/* Twitter Button */
+.twitter {
+    background: #1DA1F2;
+    box-shadow: 0 4px 8px rgba(29, 161, 242, 0.4);
+}
+
+.twitter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(29, 161, 242, 0.6);
+}
+
+/* Roblox Button */
+.roblox {
+    background: #E61E3C;
+    box-shadow: 0 4px 8px rgba(230, 30, 60, 0.4);
+}
+
+.roblox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(230, 30, 60, 0.6);
+}
