@@ -7,7 +7,6 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -21,11 +20,12 @@ body {
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 15px;
 }
 
 /* Glowing username text */
@@ -34,7 +34,6 @@ body {
     color: white;
     text-shadow: 0 0 5px #fff, 0 0 10px #d3d3ff, 0 0 15px #b0c4ff;
     animation: glow 2s infinite ease-in-out;
-    margin-left: 20px;
 }
 
 h1 {
@@ -54,6 +53,14 @@ h1 {
     }
 }
 
+/* Button container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 button {
     display: flex;
     align-items: center;
@@ -70,7 +77,6 @@ button {
     max-width: 300px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: left;
 }
 
 button img {
@@ -90,14 +96,8 @@ button:active {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .username {
-        margin-left: 0;
-        margin-top: 10px;
-        text-align: center;
+        flex-direction: row;
+        justify-content: center;
     }
 
     h1 {
