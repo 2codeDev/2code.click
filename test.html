@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Cool Links</title>
+  <title>2code's Links</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      background: #e0e0e0;
+      background-image: linear-gradient(30deg, #d6d6d6 12%, transparent 12.5%, transparent 87%, #d6d6d6 87.5%, #d6d6d6),
+                        linear-gradient(90deg, #d6d6d6 12%, transparent 12.5%, transparent 87%, #d6d6d6 87.5%, #d6d6d6);
+      background-size: 40px 70px;
+      background-position: 0 0, 20px 35px;
     }
 
     .container {
@@ -68,24 +72,9 @@
     .image-buttons a:hover {
       transform: scale(1.1);
     }
-
-    .hexagon-grid, .hexagon-grid-2 {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 102%;
-            height: 104%;
-            z-index: -1;
-            background-color: #1d1e2800;
-            opacity: 0.3;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='100' viewBox='0 0 70 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 0l25.98 15v30L35 60 9.02 45V15z' stroke='%23ffffff' stroke-opacity='0.1' fill='none' stroke-width='5'/%3E%3C/svg%3E");
-            background-size: 61px 101px;
-            background-position: center;
-        }
   </style>
 </head>
 <body>
-  <div class="hexagon-grid"></div>
   <div class="container">
     <!-- Top Image -->
     <img src="your-image-url-here" alt="Top Banner" class="top-image">
